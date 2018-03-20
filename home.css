@@ -1,0 +1,152 @@
+.ax-header-action-button {
+    color: #C94040;
+    background-color: #CCFE67;
+    width: 200px;
+    margin-right: 50px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.ax-header-action-button:hover {
+    color: #E5FCB6;
+    background-color: #C73C1A;
+}
+
+.ax-header-right {
+    display: flex;
+    justify-content: center;
+}
+
+.ax-header-button-group {
+    display: flex;
+}
+
+.ax-header-action-button--left {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    margin: 0;
+}
+
+.ax-header-action-button--right {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left: 2px solid #045873;
+    background-color: #C73C1A;
+    color: #CCFE67;
+}
+
+.ax-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #045873;
+}
+
+.ax-footer__time {
+    color: #FFFFFF;
+    font-size: 28px;
+}
+
+.ax-card-small {
+    cursor: pointer;
+}
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    .ax-header-right{
+        display: none;
+        
+    }
+    .dropdown{
+        display: inline-block;
+        margin-top: -3%;
+        
+
+    }
+
+    .dropbtn {
+        padding: 13px;
+    }
+
+    .ax-header-left-a{
+        max-width: 85%;   
+    }
+
+
+
+    .dropdown-content-form{
+        font-size: 0.9em;  
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .ax-header-form-input{
+        font-size: 0.8em;
+        width:150px;
+        display: none;
+    }
+    .ax-header-form-search-button{
+        margin-left: 2px;
+        width:80px;
+        font-size: 1em;
+        display:none;
+    }
+
+    .button-a{
+        height: 35px;
+    }
+    .ax-header-left-form{
+        display: none; 
+    }
+    .ax-header-action-button{
+        width: 150px;
+        font-size: 1em;
+
+    }
+
+
+
+}
