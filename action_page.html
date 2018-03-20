@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Action page</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+
+    <!-- style -->
+    <link href="style/common.css" rel="stylesheet">
+    <link href="style/action_page.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ax-header">
+    <div class="ax-header-left">
+        <a href="home.html" class="ax-header__title">AuctioX</a>
+        <form class="ax-header-form">
+            <input type="text" placeholder="" class="ax-header-form-input">
+            <button type="submit" class="ax-header-form-search-button">Search</button>
+        </form>
+        <div class=" container" class="container__content" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="container__content">
+                    <button class="container__button" type="button" id="closeBtn"> Close </button>
+                    <ul>
+                        <li> ADD Auction </li>
+                        <li> Go Buy </li>
+                        <li> LogOut </li>
+                    </ul>
+    </div>
+
+    <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+    </script>
+    </div>
+    <button type="button" class="ax-header-action-button">My actions</button>
+</header>
+
+<main class="ax-container">
+    <div class="ax-card ax-card-large ax-action">
+        <header class="ax-card-large__header">
+            <img src="#" class="ax-action__img">
+            <p class="ax-action__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at aut,
+                cumque possimus praesentium qui velit veritatis! Adipisci amet eligendi error est eum molestias quo
+                sequi totam unde! Architecto, ducimus.</p>
+        </header>
+        <div style="display: flex; align-items: center;">
+            <p class="ax-action-current-price">Current price: <span>2$</span></p>
+            <form>
+                <input type="number" placeholder="Liciteaza">
+                <button type="submit"> +</button>
+            </form>
+        </div>
+        <p class="ax-action-time-left"> 1 day left </p>
+    </div>
+</main>
+
+</body>
+</html>

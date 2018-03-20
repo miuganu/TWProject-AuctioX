@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>My action</title>
 
@@ -18,17 +19,39 @@
     <div class="ax-header-left">
         <a href="home.html" class="ax-header__title">AuctioX</a>
         <form class="ax-header-form">
-            <input type="text" placeholder="search" class="ax-header-form-input">
+            <input type="text" placeholder=" " class="ax-header-form-input">
             <button type="submit" class="ax-header-form-search-button">Search</button>
         </form>
+        <div class=" container" class="container__content" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <div class="container__content">
+                        <button class="container__button" type="button" id="closeBtn"> Close </button>
+                        <ul>
+                            <li> ADD Auction </li>
+                            <li> Go Buy </li>
+                            <li> LogOut </li>
+                        </ul>
+        </div>
+
+        <script>
+                function myFunction(x) {
+                    x.classList.toggle("change");
+                }
+        </script>
     </div>
-    <button type="button" class="ax-header-action-button">My actions</button>
+        <div class="ax-header-button-group">
+            <button type="button" class="ax-header-action-button ax-header-action-button--left">ADD Auction</button>
+            <button type="button" class="ax-header-action-button ax-header-action-button--right">Go Buy</button>
+        </div>
+        <button type="button" class="ax-header-logout-button">Logout</button>
 </header>
 
 <main class="ax-container">
     <div class="ax-card ax-card-normal">
         <header class="ax-card--small__header">
-            <img src="#" class="ax-card-small__img">
+            <img src="https://www.denisshoes.com/content/images/thumbs/0000923_pantofi-eleganti-3305.jpeg" class="ax-card-small__img">
             <p>Description of object</p>
         </header>
         <p class="ax-card-normal-current-price">Current price: <span>2$</span></p>

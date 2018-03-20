@@ -1,0 +1,152 @@
+.ax-header-action-button {
+    color: #C94040;
+    background-color: #CCFE67;
+    width: 300px;
+    margin-right: 50px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.ax-header-action-button:hover {
+    color: #E5FCB6;
+    background-color: #C73C1A;
+}
+
+.ax-action {
+    margin-top: 100px;
+    width: 75%;
+    padding: 50px;
+}
+
+.ax-action__img {
+    width: 250px;
+    height: 250px;
+}
+
+.ax-action__description {
+    padding-left: 30px;
+    font-size: 26px;
+}
+
+.ax-action-current-price {
+    font-size: 24px;
+    margin: 25px 0;
+    text-decoration: underline;
+}
+
+.ax-action-time-left {
+    font-size: 20px;
+    color: #363636;
+}
+@media only screen and (max-width: 800px) {
+    .ax-header{
+        max-width: 300%;
+    }
+    .ax-header-left{
+        max-width: 300%;
+        display: flex;
+    align-items: center;
+    }
+    .ax-header__title {
+        font-size: 21px;
+        padding-left: 3%;
+        height: 10%;
+    }
+    .ax-header-form {
+        margin-left: 2%;
+        justify-content: flex-start;
+    }
+    .ax-header-form-input {
+        width: 50%; 
+        font-size: 18px;
+    }
+    button, a {
+        border-radius: 50px;
+        height: 40px;
+        justify-content: center;
+        width: 30%;
+    }
+    .ax-header-form-search-button {
+        margin-left: 3%;
+        width: 70%;
+        font-size: 18px;
+
+    }
+    .container {
+        display: inline-block;
+        cursor: pointer;
+        margin-left:8%;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+    .container__content{
+            position: fixed;
+            transition: all 1s ease-out;
+            width: 15%;
+            box-sizing: border-box;
+            left: -15%;
+            height: 100%;
+            top: 0;
+            background-color: transparent;
+            color: red;
+            padding: 50px 50px 0 0;
+    }
+    .container__content .container {
+        position: absolute;
+        top: 8px;
+        right: 20px;
+    }
+    .ax-header-button-group {
+        visibility: hidden;
+    }
+    .ax-header-action-button {
+        visibility: hidden;
+    }
+    
+    .ax-header-action-button--right {
+        visibility: hidden;
+    }
+    
+    .ax-header-logout-button {
+        visibility: hidden;
+    }
+    .ax-card-large {
+        width: 98%;
+    }
+    .ax-container {
+        margin-top: 40px;
+    }
+    
+    .ax-card {
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .ax-add-new-action-card {
+        margin-top: 10%;
+        width: 100%;
+    }
+    .ax-add-new-action-form__button {
+        margin: 10%;        
+        font-size: 20px;
+        width: 70%;
+    }
+    
+}

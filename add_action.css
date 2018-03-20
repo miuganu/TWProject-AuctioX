@@ -1,0 +1,186 @@
+.ax-header-action-button {
+    color: #C94040;
+    background-color: #CCFE67;
+    width: 300px;
+    margin-right: 50px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.ax-header-action-button:hover,
+.ax-add-new-action-form__button:hover {
+    color: #E5FCB6;
+    background-color: #C73C1A;
+}
+
+.ax-add-new-action-card {
+    margin-top: 100px;
+}
+
+.ax-add-new-action-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ax-add-new-action-form__title {
+    text-align: center;
+    font-size: 48px;
+    margin: 10px;
+}
+
+.ax-add-new-action-form__input {
+    margin: 25px;
+    color: #137C99;
+    font-size: 18px;
+}
+
+.ax-add-new-action-form__input::placeholder {
+    color: #137C99;
+}
+
+.ax-add-new-action-form__input-file {
+    display: none;
+}
+
+.ax-add-new-action-form__input-file-label {
+    border-radius: 20px;
+    height: 40px;
+    background-color: #C4C4C4;
+    border: none;
+    padding-left: 25px;
+    margin: 25px;
+    font-size: 18px;
+    color: #137C99;
+    display: flex;
+    align-items: center;
+}
+
+.ax-add-new-action-form__textarea {
+    margin: 25px;
+    resize: none;
+    height: 100px;
+    font-size: 18px;
+    outline: none;
+    padding: 10px 25px;
+    color: #137C99;
+}
+
+.ax-add-new-action-form__textarea::placeholder {
+    color: #137C99;
+}
+
+.ax-add-new-action-form__button {
+    margin: 25px;
+    background-color: #CCFE67;
+    color: #C94040;
+    cursor: pointer;
+    font-size: 20px;
+}
+@media only screen and (max-width: 800px) {
+    .ax-header{
+        max-width: 110%;
+    }
+    .ax-header__title {
+        font-size: 21px;
+        padding-left: 3%;
+        height: 10%;
+    }
+    .ax-header-form {
+        margin-left: 2%;
+        justify-content: flex-start;
+    }
+    .ax-header-form-input {
+        width: 50%; 
+        font-size: 18px;
+    }
+    button, a {
+        border-radius: 50px;
+        height: 40px;
+        justify-content: center;
+        width: 30%;
+    }
+    .ax-header-form-search-button {
+        margin-left: 3%;
+        width: 70%;
+        font-size: 18px;
+
+    }
+    .container {
+        display: inline-block;
+        cursor: pointer;
+        margin-left:8%;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+    .container__content{
+            position: fixed;
+            transition: all 1s ease-out;
+            width: 15%;
+            box-sizing: border-box;
+            left: -15%;
+            height: 100%;
+            top: 0;
+            background-color: transparent;
+            color: red;
+            padding: 50px 50px 0 0;
+    }
+    .container__content .container {
+        position: absolute;
+        top: 8px;
+        right: 20px;
+    }
+    .ax-header-button-group {
+        visibility: hidden;
+    }
+    .ax-header-action-button {
+        visibility: hidden;
+    }
+    
+    .ax-header-action-button--right {
+        visibility: hidden;
+    }
+    
+    .ax-header-logout-button {
+        visibility: hidden;
+    }
+    .ax-card-large {
+        width: 98%;
+    }
+    .ax-container {
+        margin-top: 40px;
+    }
+    
+    .ax-card {
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .ax-add-new-action-card {
+        margin-top: 10%;
+        width: 100%;
+    }
+    .ax-add-new-action-form__button {
+        margin: 10%;        
+        font-size: 20px;
+        width: 70%;
+    }
+    
+}

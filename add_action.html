@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Add action</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+
+    <!-- style -->
+    <link href="style/common.css" rel="stylesheet">
+    <link href="style/add_action.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="ax-header">
+    <div class="ax-header-left">
+        <a href="home.html" class="ax-header__title">AuctioX</a>
+        <form class="ax-header-form">
+            <input type="text" placeholder="" class="ax-header-form-input">
+            <button type="submit" class="ax-header-form-search-button">Search</button>
+        </form>
+        <div class=" container" class="container__content" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="container__content">
+                    <button class="container__button" type="button" id="closeBtn"> Close </button>
+                    <ul>
+                        <li> ADD Auction </li>
+                        <li> Go Buy </li>
+                        <li> LogOut </li>
+                    </ul>
+    </div>
+
+    <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+    </script>
+    </div>
+    <button type="button" class="ax-header-action-button">My actions</button>
+</header>
+
+<main class="ax-container">
+    <div class="ax-card ax-card-large ax-add-new-action-card">
+        <form class="ax-add-new-action-form">
+            <h1 class="ax-add-new-action-form__title"> Add new auction</h1>
+            <input type="text" placeholder="Title" class="ax-add-new-action-form__input">
+            <textarea placeholder="Description" class="ax-add-new-action-form__textarea"></textarea>
+            <input type="file" accept=".jpg, .jpeg, .png" class="ax-add-new-action-form__input-file" id="fileUpload">
+            <label for="fileUpload" class="ax-add-new-action-form__input-file-label">Upload Photo</label>
+            <button type="submit" class="ax-add-new-action-form__button"> Add new auction</button>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>
