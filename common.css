@@ -133,8 +133,10 @@ button, a {
 .ax-card-small-current-price,
 .ax-card-normal-current-price {
     margin: 10px 0;
-    font-size: 14px;
-    text-decoration: underline;
+    font-size: 20px;
+    text-decoration: none;
+    color:red;
+    font-style: italic;
 }
 
 .ax-card-small-current-price span,
@@ -150,6 +152,14 @@ button, a {
 }
 
 @media only screen and (max-width: 800px) {
+    .ax-container {
+        margin-top: 40px;
+    }
+    
+    .ax-card {
+        border-radius: 5px;
+        padding: 10px;
+    }
     .ax-card-small {
         width: 48%;
     }
@@ -161,4 +171,41 @@ button, a {
     .ax-card-large {
         width: 98%;
     }
+    
+    .ax-card-small:hover {
+        width: 50%;
+    }
+    
+    .ax-card-normal:hover {
+        width: 97%;
+    }
+    .ax-header{
+        width: 120%;
+    }
+    .ax-header__title {
+        font-size: 21px;
+        padding-left: 2%;
+        height: 10%;
+    }
+    .ax-header-form {
+        margin-left: 3%;
+        justify-content: flex-start;
+    }
+    .ax-header-form-input {
+        width: 30%; 
+        font-size: 18px;
+    }
+    button, a {
+        border-radius: 20px;
+        height: 40px;
+        justify-content: center;
+        width: 30%;
+    }
+    .ax-header-form-search-button {
+        margin-left: 3%;
+        width: 40%;
+        font-size: 18px;
+
+    }
+    
 }

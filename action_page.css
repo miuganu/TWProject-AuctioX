@@ -5,6 +5,7 @@
     margin-right: 50px;
     font-size: 26px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .ax-header-action-button:hover {
@@ -22,6 +23,9 @@
     width: 250px;
     height: 250px;
 }
+.ceva{
+    margin-left: 60px;
+}
 
 .ax-action__description {
     padding-left: 30px;
@@ -31,12 +35,18 @@
 .ax-action-current-price {
     font-size: 24px;
     margin: 25px 0;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 
 .ax-action-time-left {
     font-size: 20px;
     color: #363636;
+}
+.container{
+    visibility: hidden;
+}
+.container__content{
+    visibility: hidden;
 }
 @media only screen and (max-width: 800px) {
     .ax-header{

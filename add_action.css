@@ -1,16 +1,52 @@
-.ax-header-action-button {
+/*.ax-header-action-button {
     color: #C94040;
     background-color: #CCFE67;
     width: 300px;
-    margin-right: 50px;
+    margin-right: 200px;
     font-size: 26px;
+    text-decoration: none;
+    cursor: pointer;
+}*/
+.ax-header-action-button {
+    color: #C94040;
+    background-color: #CCFE67;
+    width: 500px;
+    margin-right:40px;
+    font-size: 19px;
+    text-decoration: none;
     cursor: pointer;
 }
-
+.ax-header-button-group {
+    display: flex;
+    margin-left:100px;
+}
+.ax-header-action-button--left {
+    border-bottom-right-radius: 2;
+    border-top-right-radius: 2;
+    margin-right:4px;
+    margin-left:400px;
+    font-size:19px;
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+}
 .ax-header-action-button:hover,
 .ax-add-new-action-form__button:hover {
     color: #E5FCB6;
     background-color: #C73C1A;
+}
+.ax-header-logout-button {
+    color:#C73C1A;
+    background-color: #CCFE67;
+    width: 120px;
+    margin-right: 550px;
+    font-size: 19px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.ax-header-logout-button:hover {
+    color: #E5FCB6;
+    background-color:#C73C1A;
 }
 
 .ax-add-new-action-card {
@@ -77,9 +113,15 @@
     cursor: pointer;
     font-size: 20px;
 }
+.container{
+    visibility: hidden;
+}
+.container__content{
+    visibility: hidden;
+}
 @media only screen and (max-width: 800px) {
     .ax-header{
-        max-width: 110%;
+        width: 200%;
     }
     .ax-header__title {
         font-size: 21px;
@@ -109,7 +151,7 @@
     .container {
         display: inline-block;
         cursor: pointer;
-        margin-left:8%;
+        margin-left:30%;
     }
     
     .bar1, .bar2, .bar3 {

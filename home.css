@@ -1,9 +1,9 @@
 .ax-header-action-button {
     color: #C94040;
     background-color: #CCFE67;
-    width: 200px;
+    width: 200px; //88px;
     margin-right: 50px;
-    font-size: 26px;
+    font-size: 26px; //3vw
     cursor: pointer;
 }
 
@@ -25,6 +25,7 @@
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     margin: 0;
+    text-decoration: none;
 }
 
 .ax-header-action-button--right {
@@ -92,9 +93,58 @@
     display: block;
 }
 
+.ax-header-form-search-button{
+        display: inline-block;
+    }
 
 
-@media only screen and (max-width: 400px) {
+.chestie-logout{
+        border-radius: 0px 20px 20px 0px;
+    }
+
+.ax-header-action-button--right{
+        display: none;
+    }
+@media only screen and (max-width: 1000px){
+    .ax-header-form-input{
+        width: 128px;
+    }
+
+    .ax-header-form-search-button{
+        height: 24px;
+    }
+
+    .ax-header-action-button--left{
+        font-size: 2.3vw;
+        width: 128px;
+    }
+
+    .ax-header-action-button--right{
+        display: none;
+    }
+
+    .chestie-logout{
+        border-radius: 0px 20px 20px 0px;
+    }
+
+    .ax-header-action-button{
+        width: 128px;
+         font-size: 2.3vw;
+    }
+
+    .ax-header-form-search-button{
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ax-container{
+        flex-direction: column;
+    }
+    .ax-card-small{
+        width: 98%;
+    }
+
     .ax-header-right{
         display: none;
         
@@ -150,3 +200,4 @@
 
 
 }
+
