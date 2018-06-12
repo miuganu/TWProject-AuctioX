@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+      	        <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+
+        <div class="status">Community Draft</div>
+      </div>
+      <h1>AuctioX</h1>
+    </header>
+    <!--
+      XXX
+      - check refs
+      - the math example has too much maths
+      - bring back some of the old style
+      - make semantics, validation, processing sub-sections of each structural element
+      - have a section before that for general constructs
+        - explain why use RDFa
+        - explain our patterns: RDFa, roles
+      - figure captions need to get set throughout
+      - dedication? see doc-dedication
+      - syntactic constraints (prefix)
+      - needs more sthenurines
+      - examples of everything
+      - some notes on using Semantic CSS
+      - needs more RDFa in the spec itself
+    -->
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          <a href="https://github.com/turicioana">Turic Ioana</a> &
+          <a href="https://github.com/miuganu/">Iuganu Madalina Teodora</a>
+          <h>Anul 2, Grupa A6</h>
+        </dd>
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Abstract</h2>
+      <p>
+        AuctioX este o aplicatie open source (<a href="https://github.com/miuganu/TWProject-AuctioX">https://github.com/miuganu/TWProject-AuctioX
+        </a>) ce se doreste a fi in spiritul unui site specializat, si anume eBay. Aceasta aplicatie a fost conceputa
+        in scop pur didactic reprezentand un proiect in cadrul materiei Tehnologii Web. 
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+
+
+
+
+      <h2>Introducere</h2>
+      <p>
+        AuctioX este o aplicatie web de realizare a licitatiilor de produse cu caracter personal, astfel o accesare 
+        a aplicatiei propriu-zise necesita logarea utilizatorului. Implicit in cadrul aplicatiei un utilizator(logat)
+        va avea posibilitatea de a licita pentru produsele adaugate de alti utilizatori, dar si de a adauga produsele
+        personale. 
+      </p>
+      <p>
+        Fluxul de stiri vine ca si o functionalitate a aplicatiei punand la dispozitie informatii in timp real relativ
+        la licitatiile noi si data limita pentru licitarea acestora.
+      </p>
+      <p>
+        La nivel inalt scopul acestei aplicatii este de a:
+      </p>
+      <ul>
+        <li>pune la dispozitie utilizatorului o gama cat mai larga de produse</li>
+        <li>reprezenta o platforma unde utilizatorii isi pot pune la dispozitie produsele pe care doresc sa le dea
+          spre licitatie </li>
+        <li>
+          facilita cautarea prin punerea la dispozitie a filtrelor
+        </li>
+      </ul>
+
+    </section>
+    <section id="structure">
+      <!-- review? -->
+      <h2>Structura</h2>
+      <p>
+        Pagina de pornire<br>
+•	Va contine un formular de login unde care va contine 2 butoane. Un buton de login si unul de Sing Up in care utilizatorul isi poate crea cont<br>
+<br>
+Header<br>
+•	Header-ul o sa aiba o pozitie fixa:<br>
+•	Logo catre pagina principala<br>
+•	Unde va contine un buton de logout<br>
+<br>
+Pagina de inregistrare utilizator<br>
+
+•	Pentru inregistrare sunt cerute: <br>
+•	Username<br>
+•	Password <br>
+•	Confirm Password<br>
+•	Email<br>
+<br>
+Pagina pentru add auction<br>
+•	Utilizatoru va putea adauga anunturi cu obiecte. <br>
+•	Alti utilizatori vor putea licita la anunt.<br>
+<br>
+
+      </p>
+      <section id="Root">
+        <!-- review? -->
+        <h3>Utilizatorul înregistrat</h3>
+	Se logheaza pe aplicatie folosind un username si o parola. Dupa ce s-a logat are urmatoarele drepturi: <br>
+-	posteaza un anunt cu un obiect de cumparat;<br>
+-	poate sa liciteze la orice anunt;<br>
+-	poate sa vada celelalte licitatii si in ce stadiu sunt; <br>
+-	isi poate schimba parola (doar daca o cunoaste pe cea existenta);<br>
+-	genereaza rapoarte despre anunturi in urmatoarele formate:JSON, PDF si XML;<br>
+</section>
+
+<section id="article">
+        <!-- review? -->
+        <h3>Utilizator fara cont</h3>
+
+Utilizatorul fara cont nu va putea accesa aplicatia. Acesta poate sa isi creeze un cont completand formularul de inregistrare.
+</section>
+
+<section id="hunk">
+        <!-- review? -->
+        <h3>Etapele dezvoltării proiectului</h3>
+
+1.	Schite/Design/Arhitectura <br>
+2.	Modelare baza de date <br>
+3.	Creare pagini frontend <br>
+4.	Design backend <br>
+5.	Design proceduri My SQL <br>
+6.	Design & implementare <br>
+7.	Implementare proceduri MySQL<br>
+8.	Implementar php <br>
+9.	Implementarea view-urilor pe baza html&css&javascript <br>
+10.	Adaugare functionalitati ajax <br>
+11.	Testing<br>
+12.	Deployment<br>
+	</section>
+      <section id="inline">
+          <!-- review? -->
+          <h4>Tehnologii utilizate</h4>
+
+Proiectul utilizeaza urmatoarele tehnologii:
+HTML5 - este un limbaj pentru structurarea si prezentarea continutului pentru World Wide Web, o tehnologie nucleu pentru Internet propusa initial pentru 
+software-ul Opera.<br>
+<br>
+CSS - (Cascading Style Sheets) este un standard pentru formatarea elementelor unui document HTML. Stilurile se pot atasa elementelor HTML prin intermediul 
+unor fisiere externe sau în cadrul documentului, prin elementul "style" si/sau atributul style. CSS se poate utiliza si pentru formatarea elementelor XHTML,
+ XML si SVGL<br>
+ <br>
+Javascript - este un limbaj de programare orientat obiect bazat pe conceptul prototipurilor.Este folosit mai ales pentru introducerea unor functionalitati în 
+paginile web, codul Javascript din aceste pagini fiind rulat de catre browser. Limbajul este binecunoscut pentru folosirea sa in construirea siturilor web, 
+dar este folosit si pentru acesul la obiecte incastrate (embedded objects) în alte aplicații. A fost dezvoltat initial de către Brendan Eich de la Netscape
+ Communications Corporation sub numele de Mocha, apoi LiveScript, și denumit în final JavaScript.<br>
+ <br>
+PHP - Hypertext Preprocessor. Folosit initial pentru a produce pagini web dinamice, este folosit pe scară largă în dezvoltarea paginilor si aplicațiilor web.
+ Se folosește in principal inglobat în codul HTML, dar incepand de la versiunea 4.3.0 se poate folosi și în mod „linie de comandă” (CLI), permițând crearea 
+ de aplicații independente. Este unul din cele mai importante limbaje de programare web open-source și server-side, existând versiuni disponibile pentru 
+ majoritatea web serverelor și pentru toate sistemele de operare. Conform statisticilor este instalat pe 20 de milioane de situri web și pe 1 milion de 
+ servere web. Este disponibil sub Licenṭa PHP ṣi Free Software Foundation îl consideră a fi un software liber.<br>
+<br>
+ MySQL pentru baza de date<br>
+</section>
+<section id="references">
+        <!-- review? -->
+        <h3>Baza de date:</h3>
+•	users(id,username,password,email)<br>
+•	bid(id,user_id,product_id,date_bet,price_bet)<br>
+•	categoris(id,type_category)<br>
+•	products(id,nume,imagine,descriere,pret,pret_curent,id_categorie,insert_date,expirate_date)<br>
+•	users_products(user_id,product_id)<br>
+
+</section>
+
+      <section id="interactive">
+        <!-- review? -->
+        <h3>Servicii</h3>
+
+1. Github<br>
+
+•	GitHub este un serviciu de gazduire web pentru proiecte de dezvoltare a software-ului care utilizeaza sistemul de control al versiunilor Git. GitHub 
+ofera planuri tarifare pentru depozite private si conturi gratuite pentru proiecte open source.<br>
+        <br>
+        <br>
+</section>
+  </body>
+</html>
