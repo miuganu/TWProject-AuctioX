@@ -55,7 +55,7 @@
 				</header>
 				<p class='ax-card-small-time-left'>Start price: <span> {$row['price']} </span> </p>
 				<p class='ax-card-small-time-left'>Selling price: <span> {$row['current_price']} </span> </p>
-                <p class='ax-card-small-time-left'>This bid is expired!</p>
+                <p class='ax-card-small-time-left'>This auction is expired!</p>
 			</div>";
             }
         }
