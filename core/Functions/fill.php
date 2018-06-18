@@ -26,8 +26,8 @@
 
         $output = '';
         while ($row = mysql_fetch_array($result)) {
-
-            $output .= "
+            if($row['expirate_date'] >= date('Y-m-d', time())) {
+                $output .= "
                 <div class='ax-card ax-card-small'>
 				<header class='ax-card--small__header'>
 					<img src='image/{$row['image']}' class='ax-card-small__img'>
@@ -44,9 +44,22 @@
                 <p class='ax-card-small-time-left'>Expire date: <span> {$row['expirate_date']} </span> </p>
 			</div>
             ";
+            }
+            else {
+                $output .= "
+                <div class='ax-card ax-card-small'>
+				<header class='ax-card--small__header'>
+					<img src='image/{$row['image']}' class='ax-card-small__img'>
+					<p><span> {$row['product_name']} </span></p>|
+					<p>{$row['description']}</p>
+				</header>
+				<p class='ax-card-small-time-left'>Start price: <span> {$row['price']} </span> </p>
+				<p class='ax-card-small-time-left'>Selling price: <span> {$row['current_price']} </span> </p>
+                <p class='ax-card-small-time-left'>This bid is expired!</p>
+			</div>";
+            }
         }
         return $output;
     }
 ?>
-
 </html>
