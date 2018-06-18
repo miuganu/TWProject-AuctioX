@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Raport</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+      	        <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+
+        <div class="status">Community Draft</div>
+      </div>
+      <h1>AuctioX</h1>
+    </header>
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          <a href="https://github.com/turicioana">Turic Ioana</a> &
+          <a href="https://github.com/miuganu/">Iuganu Madalina Teodora</a>
+          <h>Anul 2, Grupa A6</h>
+        </dd>
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Abstract</h2>
+      <p>
+        AuctioX este o aplicatie open source (<a href="https://github.com/miuganu/TWProject-AuctioX">https://github.com/miuganu/TWProject-AuctioX
+        </a>) ce se doreste a fi in spiritul unui site specializat, si anume eBay. Aceasta aplicatie a fost conceputa
+        in scop pur didactic reprezentand un proiect in cadrul materiei Tehnologii Web. 
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+
+
+
+
+      <h2>Introducere</h2>
+      <p>
+        AuctioX este o aplicatie web de realizare a licitatiilor de produse cu caracter personal, astfel o accesare 
+        a aplicatiei propriu-zise necesita logarea utilizatorului. Implicit in cadrul aplicatiei un utilizator(logat)
+        va avea posibilitatea de a licita pentru produsele adaugate de alti utilizatori, dar si de a adauga produsele
+        personale. 
+      </p>
+      <p>
+        Fluxul de stiri vine ca si o functionalitate a aplicatiei punand la dispozitie informatii in timp real relativ
+        la licitatiile noi si data limita pentru licitarea acestora.
+      </p>
+      <p>
+        La nivel inalt scopul acestei aplicatii este de a:
+      </p>
+      <ul>
+        <li>pune la dispozitie utilizatorului o gama cat mai larga de produse</li>
+        <li>reprezenta o platforma unde utilizatorii isi pot pune la dispozitie produsele pe care doresc sa le dea
+          spre licitatie </li>
+        <li>
+          facilita cautarea prin punerea la dispozitie a filtrelor(dupa categoria din care fac parte licitatiile, data de expirarea,
+          si pretul maxim al produselor)
+        </li>
+        <li>
+          oferi posibilitatea de a cauta dupa cuvinte cheie prezente in titlul sau descrierea licitatiei
+        </li>
+      </ul>
+
+    </section>
+    <section id="structure">
+      <!-- review? -->
+      <h2>Structura</h2>
+      <p>
+        Pagina de pornire<br>
+•	Va contine un formular de login unde sunt prezente 2 campuri si anume username si parola, o nepotrivire a acestora va genera diverse mesaje de eroare.
+De asemeni va exista un buton de Login care permite accesul catre pagina principala a aplicatiei.
+Un buton de Make an account va fi situat in partea dreapta a paginii de pornire, si va oferi utilizatorului posibilitatea de a crea un cont nou.<br>
+<br>
+Pagina de inregistrare utilizator<br>
+
+•	Cerintele pentru inregistrare sunt urmatoarele: <br>
+• Un username<br>
+•	O parola (de minim 6 caractere) <br>
+•	Confirmarea parolei<br>
+•	In final un email(valid)<br>
+<br>
+Pagina principala va contine<br>
+•	Header-ul care contine numele aplicatiei(un simplu click va redirectiona utilizatorul catre pagina principala), un search bar prevazut cu un buton de search, apoi 2 dropdown-uri unul care pune la dispozitie formatele in care poate fi downloada situatia licitatiilor,
+si unul de options, care pune la dispozitie pagnile de MyAuction, AddAuction, News si Change password. Pe lanaga acestea se afla si butonul de logout.<br>
+•	Licitatiile, fiecare licitatie va avea un titlu, descriere, pretul de start, pretul actual in cazul licitatiilor care nu au expirat(la aceste produse se poate licita), altfel va fi afisat pretul de vindere(in cazul produselor expirate).
+De asemeni sunt incluse si dropdown-ur care pun la dispozitie filtrarile disponibile, si anume dupa categorie, pret si data de expirare.<br>
+<br>
+Pagina Add Auction<br>
+•	Pagina de unde utilizatorul va putea adauga obiecte. <br>
+•	Este necesara completarea tuturor campurilor pentru a adauga o licitatie si anume: numele produsului,
+pretul initial, categoria din care face parte, o imagine in diferite formate, o data de expirare care nu depaseste o luna de zile, si o descriere a produsului.<br>
+• Aceasta pagina este prevazuta si cu un buton care permite salvarea licitatiei adaugate.<br>
+<br>
+Pagina MyAuction<br>
+• Reprezinta pagina cu licitatiile adaugate de catre utilizatorul existent in acea sesiune.<br>
+• Formatul in care acestea vor fi afisate este similar paginii principale.<br>
+<br>
+Pagina de schimbare a parolei<br>
+• Este un form unde e necesara completarea a 3 campuri si anume: parola veche, parola noua si confirmarea acesteia.<br>
+• Contine un buton pentru salvarea noii parole.<br>
+<br>
+Pagina de News<br>
+• Pune la dispozitie un flux de stiri, in format Atom, cu ultimele produse adaugate.<br>
+<br>
+
+      </p>
+      <section id="Root">
+        <!-- review? -->
+        <h3>Utilizatorul înregistrat</h3>
+	Se logheaza pe aplicatie folosind un username si o parola. Dupa ce s-a logat are urmatoarele drepturi: <br>
+-	adauga un nou prods spre a fi licitat;<br>
+-	poate sa liciteze( cu un pret mai mare decat cel curent) la orice licitatie care nu e expirata;<br>
+-	are acces la situatia licitatiilor; <br>
+-	isi poate schimba parola (doar daca o cunoaste pe cea existenta);<br>
+-	genereaza rapoarte despre anunturi in urmatoarele formate:JSON, PDF si XML;<br>
+- are acces la fluxul de stiri disponibil in format Atom.<br>
+</section>
+
+<section id="article">
+        <!-- review? -->
+        <h3>Utilizator fara cont</h3>
+
+Utilizatorul fara cont nu va putea accesa aplicatia. Acesta poate sa isi creeze un cont completand formularul de inregistrare.
+</section>
+
+<section id="hunk">
+        <!-- review? -->
+        <h3>Etapele dezvoltării proiectului</h3>
+
+1.  Alegerea proiectului <br>
+2.  Schite pentru realizarea designului<br>
+3.  Crearea paginilor pentru front-end(html-uri & css-uri)<br>
+4.  Arhitectura(realizarea diagramelor UML, UseCase, schema bazei de date)<br>
+5.  Realizarea tabelelor in baza de date<br>
+6.  Implementarea in PHP a functionalitatilor proiectului<br>
+7.  Implementarea view-urilor pentru fiecare pagina<br>
+8.  Adaugare functionalitati AJAX<br>
+9.  Testarea aplicatiei<br>
+10. Deployment<br>
+	</section>
+      <section id="inline">
+          <!-- review? -->
+          <h4>Tehnologii utilizate</h4>
+
+Proiectul utilizeaza urmatoarele tehnologii:
+HTML5 - este un limbaj pentru structurarea si prezentarea continutului pentru World Wide Web, o tehnologie nucleu pentru Internet propusa initial pentru 
+software-ul Opera.<br>
+<br>
+CSS - (Cascading Style Sheets) este un standard pentru formatarea elementelor unui document HTML. Stilurile se pot atasa elementelor HTML prin intermediul 
+unor fisiere externe sau în cadrul documentului, prin elementul "style" si/sau atributul style. CSS se poate utiliza si pentru formatarea elementelor XHTML,
+ XML si SVGL<br>
+ <br>
+Javascript - este un limbaj de programare orientat obiect bazat pe conceptul prototipurilor.Este folosit mai ales pentru introducerea unor functionalitati în 
+paginile web, codul Javascript din aceste pagini fiind rulat de catre browser. Limbajul este binecunoscut pentru folosirea sa in construirea siturilor web, 
+dar este folosit si pentru acesul la obiecte incastrate (embedded objects) în alte aplicații. A fost dezvoltat initial de către Brendan Eich de la Netscape
+ Communications Corporation sub numele de Mocha, apoi LiveScript, și denumit în final JavaScript.<br>
+ <br>
+PHP - Hypertext Preprocessor. Folosit initial pentru a produce pagini web dinamice, este folosit pe scară largă în dezvoltarea paginilor si aplicațiilor web.
+ Se folosește in principal inglobat în codul HTML, dar incepand de la versiunea 4.3.0 se poate folosi și în mod „linie de comandă” (CLI), permițând crearea 
+ de aplicații independente. Este unul din cele mai importante limbaje de programare web open-source și server-side, existând versiuni disponibile pentru 
+ majoritatea web serverelor și pentru toate sistemele de operare. Conform statisticilor este instalat pe 20 de milioane de situri web și pe 1 milion de 
+ servere web. Este disponibil sub Licenṭa PHP ṣi Free Software Foundation îl consideră a fi un software liber.<br>
+<br>
+ MySQL pentru baza de date<br>
+</section>
+<section id="references">
+        <!-- review? -->
+        <h3>Baza de date</h3>
+•	users(id,username,password,email)<br>
+•	bid(id,user_id,product_id,date_bet,price_bet)<br>
+•	categoris(id,type_category)<br>
+•	products(id,nume,imagine,descriere,pret,pret_curent,id_categorie,insert_date,expirate_date, user_id)<br>
+•	generate(username,Type_Caregori,product_name,current_price)<br>
+
+</section>
+
+      <section id="interactive">
+        <!-- review? -->
+        <h3>Servicii</h3>
+
+1. Github<br>
+
+•	GitHub este un serviciu de gazduire web pentru proiecte de dezvoltare a software-ului care utilizeaza sistemul de control al versiunilor Git. GitHub 
+ofera planuri tarifare pentru depozite private si conturi gratuite pentru proiecte open source.<br>
+        <br>
+        <br>
+</section>
+</section>
+  </body>
+</html>
