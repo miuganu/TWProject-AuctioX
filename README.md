@@ -1,5 +1,7 @@
 # TWProject-AuctioX
 
+https://vimeo.com/275830371
+
 Implementati o aplicatie Web de realizare a licitatiilor de produse cu caracter personal, in spiritul celor oferite de un site specializat
 precum eBay. Pentru fiecare utilizator autentificat, se va pune la dispozitie un flux de stiri in format Atom oferind informatii despre 
 obiectele oferite si data-limita a licitatiilor disponibile. Suplimentar, pentru fiecare obiect licitat vor putea fi atasate meta-date: 
