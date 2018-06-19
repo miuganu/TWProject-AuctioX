@@ -8,17 +8,17 @@
         $imageFileType = pathinfo("image/" . basename($_FILES['image']['name']), PATHINFO_EXTENSION);
         $image = $_FILES['image']['name'];
         $allowed = array('gif', 'png', 'jpg', 'jpeg');
-        $product_id = $_POST['product_id'];
+//        $product_id = $_POST['product_id'];
         $productName = $_POST['product_name'];
         $categori = $_POST['categori'];
         $price = $_POST['price'];
         $user_id = $user_data['user_id'];
-        echo "$product_id";
+        //echo "$product_id";
         if (!in_array($imageFileType, $allowed)) {
             $isImage = false;
         }
         $description = $_POST['description'];
-        if (($description == true) && ($isImage == true) && ($price == true)) {
+        if (($description == true) && ($isImage == true) && ($price == true) && ($productName == true)) {
             move_uploaded_file($_FILES['image']['tmp_name'], "image/" . $_FILES["image"]["name"]);
             $current_date = date('Y-m-d H:i:s', time());
             $time = strtotime($_POST['dateField']);
@@ -34,7 +34,7 @@
 
             exit();
         } else {
-            echo '<h1> You need to insert a <b>image</b></h1>';
+            echo '<h1> You need to fill in <b>all fields</b></h1>';
         }
     }
 ?>
@@ -77,9 +77,9 @@
         <form method="POST" class="ax-add-new-action-form" enctype="multipart/form-data">
             <h3 class="ax-add-new-action-form__title">Insert your auction announce!</h3>
 
-            <input class="ax-add-new-action-form__input" placeholder="Product Name" type="text" name="product_name"/>
+            <input class="ax-add-new-action-form__input" placeholder="Product Name" type="text" name="product_name" required/>
 
-            <input class="ax-add-new-action-form__input" placeholder="Product Price" type="number" name="price"/>
+            <input class="ax-add-new-action-form__input" placeholder="Product Price" type="number" name="price" required/>
 
             <select class="selectAnounce" name="categori">
                 <?php echo fill_type_category($connect); ?>
@@ -96,7 +96,7 @@
                 <input type = "date" name = "dateField" min = <?php echo date('Y-m-d', time()); ?> max = <?php echo date('Y-m-d',time() + (30 * 24 * 60 * 60));?> >
             </div>
 
-            <textarea class="ax-add-new-action-form__textarea" name="description"
+            <textarea class="ax-add-new-action-form__textarea" name="description" required
                       placeholder="Enter Product description" cols="40" rows="4" class="anounceDescription"></textarea>
 
             <button type="submit" name="upload" value="Save" class="ax-add-new-action-form__button">Post</button>

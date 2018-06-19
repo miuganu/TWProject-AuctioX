@@ -4,7 +4,7 @@
     include 'core/functions/get_my_auctions.php';
 
     if (isset($_POST['comment'])) {
-        insert_comment($_POST['conted'], $_POST['lpost_id'], $user_data['user_id']);
+        insert_bid($_POST['conted'], $_POST['lpost_id'], $user_data['user_id']);
     }
 ?>
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
 <header class="ax-header">
     <div class="ax-header-left">
         <a href="home.php" class="ax-header__title">AuctioX</a>
-        <form class="ax-header-form">
+        <form class="ax-header-form" method="post">
             <input type="text" placeholder="search" class="ax-header-form-input" name="search">
             <button type="submit" class="ax-header-form-search-button">Search</button>
         </form>
@@ -39,7 +39,14 @@
     </div>
 </header>
 <main class="ax-container">
-    <?php echo get_my_products($user_data['user_id']); ?>
+<!--    --><?php //echo get_my_products($user_data['user_id']); ?>
+    <?php
+    if (!isset($_POST['search'])) {
+        echo get_my_products($user_data['user_id']);
+    } else {
+        echo fill_search_auction($_POST['search'], $user_data['user_id']);
+    }
+    ?>
 </main>
 </body>
 </html>
